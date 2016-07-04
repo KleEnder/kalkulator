@@ -30,7 +30,7 @@ class BaseHandler(webapp2.RequestHandler):
 class MainHandler(BaseHandler):
     def get(self):
 
-        return self.render_template("hello.html")
+        return self.render_template("main.html")
 
     def post(self):
 
@@ -65,7 +65,7 @@ class MainHandler(BaseHandler):
         self.write("Entered was: " + str(number) + ". " + "Second enter was: " + str(number2) + ". " +
                    "Inputted operation was :" + str(operationa) + ". " + '\n' + "Result is: " + str(operation(operationa)))
         '''
-        return self.render_template("hello.html", params=enviornment)
+        return self.render_template("main.html", params=enviornment)
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
